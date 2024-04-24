@@ -1,0 +1,71 @@
+/* Estilo del contenedor del carrito */
+.cart {
+  background: #0000; /* Fondo del carrito */
+  display: none; /* Por defecto, el carrito no se ve */
+  padding: 32px; /* Espaciado interno del carrito */
+  position: fixed; /* Posición fija para que el carrito se mantenga en la misma posición en la pantalla */
+  right: 0px; /* Ubicación del carrito en el borde derecho de la pantalla */
+  top: 0px; /* Ubicación del carrito en la parte superior de la pantalla */
+  width: 200px; /* Ancho del carrito */
+}
+
+/* Estilo de las imágenes dentro del carrito */
+.cart img {
+  aspect-ratio: 16/9; /* Relación de aspecto de las imágenes del carrito */
+  width: 100%; /* Ancho de las imágenes del carrito */
+}
+
+/* Estilo de los elementos de lista dentro del carrito */
+.cart li {
+  border-bottom: 1px solid #444; /* Borde inferior de los elementos de lista */
+  padding-bottom: 16px; /* Espaciado inferior de los elementos de lista */
+  list-style: none; /* Quita los puntos de la lista */
+}
+
+/* Estilo del contenedor de la lista dentro del carrito */
+.cart ul {
+  height: 58%; /* Altura máxima de la lista dentro del carrito */
+  overflow: auto; /* Agrega barras de desplazamiento si el contenido de la lista es más grande que el contenedor */
+}
+
+/* Estilo del pie de página del carrito */
+.cart footer {
+  display: flex; /* Mostrar los elementos del pie de página en una fila */
+  gap: 8px; /* Espacio entre los elementos del pie de página */
+  justify-content: center; /* Centrar los elementos del pie de página horizontalmente */
+  align-items: center; /* Centrar los elementos del pie de página verticalmente */
+}
+
+/* Estilo de los botones en el pie de página del carrito */
+.cart footer button {
+  padding: 8px; /* Espaciado interno de los botones en el pie de página */
+}
+
+/* Estilo del botón para abrir el carrito */
+.cart-button {
+  align-items: center; /* Centrar los elementos del botón */
+  background: #09f; /* Color de fondo del botón */
+  border-radius: 9999px; /* Borde redondeado del botón */
+  cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre el botón */
+  display: flex; /* Mostrar los elementos del botón en una fila */
+  height: 32px; /* Altura del botón */
+  justify-content: center; /* Centrar los elementos del botón horizontalmente */
+  padding: 4px; /* Espaciado interno del botón */
+  position: absolute; /* Posición absoluta para que el botón se mantenga en la misma posición en la pantalla */
+  right: 8px; /* Ubicación del botón en el borde derecho de la pantalla */
+  top: 8px; /* Ubicación del botón en la parte superior de la pantalla */
+  transition: all 0.3s ease; /* Transición suave para cambios de estilo */
+  width: 32px; /* Ancho del botón */
+  z-index: 9999; /* Capa z del botón para que aparezca encima de otros elementos */
+}
+
+/* Estilo del botón cuando se pasa el cursor sobre él */
+.cart-button:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño del botón */
+}
+
+/* Selector para mostrar el carrito cuando el botón está activado */
+.cart-button ~ input:checked ~ .cart {
+  height: 100%; /* Altura del carrito cuando está activado */
+  display: block; /* Mostrar el carrito cuando está activado */
+}
